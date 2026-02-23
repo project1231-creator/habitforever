@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Libra - саморазвитие</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+        body {
+            background: #f5f7fa;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #2E7D32;
+        }
+        .streak {
+            background: #FF6B6B;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 30px;
+            font-size: 14px;
+        }
+        .menu-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-top: 20px;
+        }
+        .menu-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px 20px;
+            text-align: center;
+            text-decoration: none;
+            color: #333;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            transition: transform 0.2s;
+        }
+        .menu-card:hover {
+            transform: translateY(-4px);
+        }
+        .menu-icon {
+            font-size: 48px;
+            margin-bottom: 12px;
+        }
+        .menu-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+        .menu-desc {
+            font-size: 14px;
+            color: #666;
+        }
+        .stats-widget {
+            background: white;
+            border-radius: 20px;
+            padding: 20px;
+            margin: 30px 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        .stats-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+        .stats-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 12px;
+            color: #444;
+        }
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            display: flex;
+            justify-content: space-around;
+            padding: 12px;
+            border-top: 1px solid #eee;
+        }
+        .nav-item {
+            text-align: center;
+            color: #888;
+            text-decoration: none;
+            font-size: 12px;
+        }
+        .nav-item.active {
+            color: #2E7D32;
+        }
+        .nav-icon {
+            font-size: 24px;
+            display: block;
+        }
+        .content {
+            padding-bottom: 80px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">🌱 LIBRA</div>
+            <div class="streak">🔥 12 дней</div>
+        </div>
+
+        <div class="content">
+            <div class="menu-grid">
+                <a href="/library" class="menu-card">
+                    <div class="menu-icon">📚</div>
+                    <div class="menu-title">Библиотека</div>
+                    <div class="menu-desc">320 статей</div>
+                </a>
+                <a href="#" class="menu-card">
+                    <div class="menu-icon">📊</div>
+                    <div class="menu-title">Статистика</div>
+                    <div class="menu-desc">45 прочитано</div>
+                </a>
+                <a href="#" class="menu-card">
+                    <div class="menu-icon">👥</div>
+                    <div class="menu-title">Профили</div>
+                    <div class="menu-desc">12 друзей</div>
+                </a>
+                <a href="#" class="menu-card">
+                    <div class="menu-icon">⚡</div>
+                    <div class="menu-title">Привычки</div>
+                    <div class="menu-desc">скоро</div>
+                </a>
+            </div>
+
+            <div class="stats-widget">
+                <div class="stats-title">📊 Твой прогресс</div>
+                <div class="stats-row">
+                    <span>Прочитано статей:</span>
+                    <span><strong>45</strong></span>
+                </div>
+                <div class="stats-row">
+                    <span>Время чтения:</span>
+                    <span><strong>12 часов</strong></span>
+                </div>
+                <div class="stats-row">
+                    <span>Очки знаний:</span>
+                    <span><strong>1,240</strong></span>
+                </div>
+                <div style="margin-top: 12px; text-align: right;">
+                    <a href="#" style="color: #2E7D32;">Подробнее →</a>
+                </div>
+            </div>
+
+            <div style="background: white; border-radius: 20px; padding: 20px;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 16px;">
+                    <span style="font-weight: 600;">👥 Друзья читают</span>
+                    <a href="#" style="color: #2E7D32;">Все</a>
+                </div>
+                <div style="display: flex; gap: 16px;">
+                    <div style="text-align: center;">
+                        <div style="width: 50px; height: 50px; background: #FFEAA7; border-radius: 25px; display: flex; align-items: center; justify-content: center; font-size: 24px;">👤</div>
+                        <div style="font-size: 12px; margin-top: 4px;">Анна</div>
+                        <div style="font-size: 10px; color: #2E7D32;">12 ст.</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="width: 50px; height: 50px; background: #C1E1C1; border-radius: 25px; display: flex; align-items: center; justify-content: center; font-size: 24px;">👤</div>
+                        <div style="font-size: 12px; margin-top: 4px;">Мих</div>
+                        <div style="font-size: 10px; color: #2E7D32;">8 ст.</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="width: 50px; height: 50px; background: #FFB6C1; border-radius: 25px; display: flex; align-items: center; justify-content: center; font-size: 24px;">👤</div>
+                        <div style="font-size: 12px; margin-top: 4px;">Катя</div>
+                        <div style="font-size: 10px; color: #2E7D32;">24 ст.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom-nav">
+        <a href="/" class="nav-item active">
+            <span class="nav-icon">🏠</span>
+            <span>Главная</span>
+        </a>
+        <a href="/library" class="nav-item">
+            <span class="nav-icon">📚</span>
+            <span>Библиотека</span>
+        </a>
+        <a href="#" class="nav-item">
+            <span class="nav-icon">📊</span>
+            <span>Статистика</span>
+        </a>
+        <a href="#" class="nav-item">
+            <span class="nav-icon">👤</span>
+            <span>Профиль</span>
+        </a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Библиотека - Libra</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        /* те же стили, что в index.html + добавим новые */
+        .search-box {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 30px;
+            margin: 20px 0;
+            font-size: 16px;
+        }
+        .category-chip {
+            display: inline-block;
+            padding: 8px 16px;
+            background: #f0f0f0;
+            border-radius: 30px;
+            margin-right: 8px;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+        .article-item {
+            background: white;
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 12px;
+            text-decoration: none;
+            color: #333;
+            display: block;
+            border: 1px solid #eee;
+        }
+        .article-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+        .article-meta {
+            font-size: 12px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div style="margin: 20px 0;">
+            <a href="/" style="color: #2E7D32; text-decoration: none;">← На главную</a>
+        </div>
+        
+        <h1 style="margin-bottom: 10px;">📚 Библиотека знаний</h1>
+        <p style="color: #666; margin-bottom: 20px;">320 статей для саморазвития</p>
+        
+        <input type="text" placeholder="🔍 Поиск статей..." class="search-box">
+        
+        <div style="margin: 20px 0;">
+            <span class="category-chip">🧠 Все</span>
+            <span class="category-chip">🧠 Нейробиология</span>
+            <span class="category-chip">🧘 Менталка</span>
+            <span class="category-chip">⚡ Привычки</span>
+            <span class="category-chip">🎯 Цели</span>
+        </div>
+        
+        <div style="margin-top: 20px;">
+            {% for article in articles %}
+            <a href="/article/{{ article.id }}" class="article-item">
+                <div class="article-title">{{ article.title }}</div>
+                <div class="article-meta">{{ article.category }} • 5 мин чтения</div>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+    
+    <div class="bottom-nav">
+        <a href="/" class="nav-item">
+            <span class="nav-icon">🏠</span>
+            <span>Главная</span>
+        </a>
+        <a href="/library" class="nav-item active">
+            <span class="nav-icon">📚</span>
+            <span>Библиотека</span>
+        </a>
+        <a href="#" class="nav-item">
+            <span class="nav-icon">📊</span>
+            <span>Статистика</span>
+        </a>
+        <a href="#" class="nav-item">
+            <span class="nav-icon">👤</span>
+            <span>Профиль</span>
+        </a>
+    </div>
+</body>
+</html>
